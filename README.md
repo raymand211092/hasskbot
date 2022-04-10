@@ -1,5 +1,7 @@
 # HASSkbot - home-assistant ask bot
 
+[![Matrix Channel](https://img.shields.io/matrix/hasskbot:fiksel.info.svg?label=%23hasskbot%3Afiksel.info&logo=matrix&server_fqdn=matrix.fiksel.info)](https://matrix.to/#/#hasskbot:fiksel.info)
+
 Opsdroid bot, which reacts to a home-assistant entity state change (like person tracker, or light) and asks for confirmation if it should run additional home-assistant atomation.
 Matrix reactions are used for confirming or canceling action.
 
