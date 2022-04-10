@@ -3,8 +3,8 @@
 Opsdroid bot, which reacts to a home-assistant entity state change (like person tracker, or light) and asks for confirmation if it should run additional home-assistant atomation.
 Matrix reactions are used for confirming or canceling action.
 
-* [ ] TODO: Screenshot
 ![screenshot01](images/screenshot01.png)
+![screenshot02](images/screenshot02.png)
 
 # Running
 
