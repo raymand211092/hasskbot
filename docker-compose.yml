@@ -1,0 +1,8 @@
+version: '3'
+services:
+  app:
+    image: "registry.gitlab.com/olegfiksel/hasskbot"
+    env_file: ./secrets.env
+    volumes:
+      - './configuration.yaml:/etc/opsdroid/configuration.yaml:ro'
+    restart: always

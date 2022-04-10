@@ -1,0 +1,55 @@
+# Opsdroid can use environment variable in the config file (https://docs.opsdroid.dev/en/v0.18.0/configuration.html#environment-variables)
+# This can be usefull for secrets to avoid having them in git
+connectors:
+  matrix:
+    # Required
+    homeserver: "https://matrix.my-matrix-domain.com"
+    mxid: $MATRIX_MXID
+    # use password or token
+    password: $MATRIX_PASSWORD
+    # token: "very-long-matrix-token"
+    # A dictionary of multiple rooms
+    # One of these should be named 'main'
+    rooms:
+      main:
+        alias: $MATRIX_ROOM_MAIN
+        # Send messages as msgType: m.notice
+        send_m_notice: False
+      debug:
+        alias: $MATRIX_ROOM_DEBUG
+        send_m_notice: False
+    #nick: "Botty McBotface"  # The nick will be set on startup
+    #room_specific_nicks: False  # Look up room specific nicknames of senders (expensive in large rooms)
+  homeassistant:
+    url: https://my-home-assistant.example.com
+    # How to get the token: https://developers.home-assistant.io/docs/auth_api/#long-lived-access-token
+    # Simple:
+    # * Browse to https://my-home-assistant.example.com/profile
+    # * Scroll to the bottom of the page (Long-Lived Access Tokens)
+    # * Create a Long-Lived Access Token
+    token: $HOME_ASSISTANT_TOKEN
+
+skills:
+  # Please leave the name unchanged
+  hasskbot:
+    # Can be path, repo or Python module
+    # Details: https://docs.opsdroid.dev/en/stable/packaging.html#single-module-extensions
+    path: /skills/hasskbot
+    config:
+      # Question to ask when the entity state is mached
+      confirm_message: "No one is at home. Should I enable alarm?"
+      # Expire confirm event after X minutes
+      expire_after: 30
+      # Expire message
+      expire_message: "\u23f0 Reaction time is expired"
+      # Allowed users
+      # MXID is used
+      # RegEx is possible
+      allowed_users_re:
+        - "^@user:domain.com$"
+      # HASS data for triggering the automation/script
+      hass_domain: 'automation'
+      hass_service: 'turn_on'
+      hass_entity: 'group.all_cameras_motion_notifications'
+      # Message to send when the automation/script is triggered
+      acknowledge_message: "\U0001f916 Mache Kameraüberwachung an"
