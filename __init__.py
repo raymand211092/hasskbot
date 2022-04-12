@@ -49,7 +49,6 @@ class HASkill(HassSkill):
                 return True
         return False
 
-    # TODO: feature expire message after custom amount of time
     @match_crontab('* * * * *')
     async def cron(self, event):
         if self.confirm_event == "":
