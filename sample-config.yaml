@@ -7,7 +7,7 @@ connectors:
     mxid: $MATRIX_MXID
     # use password or token
     password: $MATRIX_PASSWORD
-    # token: "very-long-matrix-token"
+    # access_token: "very-long-matrix-token"
     # A dictionary of multiple rooms
     # One of these should be named 'main'
     rooms:
