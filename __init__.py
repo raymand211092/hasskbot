@@ -13,7 +13,7 @@ import datetime
 
 _LOGGER = logging.getLogger(__name__)
 
-version = "v1.0.0"
+version = "v1.0.1"
 
 EMOJI_YES = '\u2705'
 EMOJI_NO = '\u274c'
