@@ -1,6 +1,6 @@
 # v1.0.2
 
-* Bump Opsdroid version to [v0.29.0](https://github.com/opsdroid/opsdroid/releases/tag/v0.29.0)
+* Bump Opsdroid version to [v0.28.0](https://github.com/opsdroid/opsdroid/releases/tag/v0.28.0)
 
 # v1.0.1
 
