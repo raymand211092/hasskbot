@@ -6,7 +6,10 @@ Opsdroid bot, which reacts to a home-assistant entity state change (like person 
 Matrix reactions are used for confirming or canceling action.
 
 ![screenshot01](images/screenshot01.png)
+
 ![screenshot02](images/screenshot02.png)
+
+![screenshot02](images/screenshot03.png)
 
 # Running
 
@@ -31,6 +34,10 @@ cp secrets-example.env secrets.env
 docker-compose up -d
 docker-compose logs -f
 ```
+
+## Examples
+
+* [Run vacuum robot](examples/vacuum-robot-prompt.md)
 
 # Troubleshooting
 
